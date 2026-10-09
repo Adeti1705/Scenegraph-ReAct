@@ -1,0 +1,301 @@
+{
+  "video_id": "0001_4164158586",
+  "meta": {
+    "height": 360,
+    "width": 480,
+    "fps": 5.0,
+    "duration": 36.0,
+    "num_frames": 180
+  },
+  "objects": [
+    {
+      "object_id": 1,
+      "category": "adult",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 2,
+      "category": "child",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 3,
+      "category": "cake",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 4,
+      "category": "table",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 5,
+      "category": "chair",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 6,
+      "category": "cabinet",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 7,
+      "category": "door",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 8,
+      "category": "fridge",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 9,
+      "category": "microwave",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 10,
+      "category": "wall",
+      "is_thing": false,
+      "status": []
+    },
+    {
+      "object_id": 11,
+      "category": "floor",
+      "is_thing": false,
+      "status": []
+    },
+    {
+      "object_id": 12,
+      "category": "countertop",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 13,
+      "category": "ceiling",
+      "is_thing": false,
+      "status": []
+    }
+  ],
+  "relations": [
+    [
+      1,
+      2,
+      "holding",
+      [
+        [
+          0,
+          59
+        ],
+        [
+          119,
+          179
+        ]
+      ]
+    ],
+    [
+      1,
+      3,
+      "holding",
+      [
+        [
+          25,
+          33
+        ],
+        [
+          154,
+          179
+        ]
+      ]
+    ],
+    [
+      2,
+      3,
+      "looking at",
+      [
+        [
+          25,
+          33
+        ],
+        [
+          136,
+          154
+        ]
+      ]
+    ],
+    [
+      1,
+      5,
+      "sitting on",
+      [
+        [
+          77,
+          85
+        ],
+        [
+          93,
+          102
+        ]
+      ]
+    ],
+    [
+      2,
+      5,
+      "sitting on",
+      [
+        [
+          77,
+          85
+        ],
+        [
+          93,
+          102
+        ]
+      ]
+    ],
+    [
+      1,
+      6,
+      "next to",
+      [
+        [
+          77,
+          85
+        ],
+        [
+          93,
+          102
+        ]
+      ]
+    ],
+    [
+      2,
+      6,
+      "next to",
+      [
+        [
+          77,
+          85
+        ],
+        [
+          93,
+          102
+        ]
+      ]
+    ],
+    [
+      1,
+      7,
+      "opening",
+      [
+        [
+          85,
+          93
+        ],
+        [
+          102,
+          106
+        ]
+      ]
+    ],
+    [
+      2,
+      7,
+      "entering",
+      [
+        [
+          85,
+          93
+        ],
+        [
+          102,
+          106
+        ]
+      ]
+    ],
+    [
+      1,
+      10,
+      "next to",
+      [
+        [
+          128,
+          136
+        ],
+        [
+          145,
+          154
+        ]
+      ]
+    ],
+    [
+      2,
+      10,
+      "next to",
+      [
+        [
+          128,
+          136
+        ],
+        [
+          145,
+          154
+        ]
+      ]
+    ],
+    [
+      1,
+      11,
+      "standing on",
+      [
+        [
+          154,
+          179
+        ]
+      ]
+    ],
+    [
+      2,
+      11,
+      "standing on",
+      [
+        [
+          154,
+          179
+        ]
+      ]
+    ],
+    [
+      1,
+      13,
+      "looking at",
+      [
+        [
+          154,
+          179
+        ]
+      ]
+    ],
+    [
+      2,
+      13,
+      "looking at",
+      [
+        [
+          154,
+          179
+        ]
+      ]
+    ]
+  ]
+}

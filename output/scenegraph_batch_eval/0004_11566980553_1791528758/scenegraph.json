@@ -1,0 +1,181 @@
+{
+  "video_id": "0004_11566980553",
+  "meta": {
+    "height": 480,
+    "width": 640,
+    "fps": 5.0,
+    "duration": 57.4,
+    "num_frames": 287
+  },
+  "objects": [
+    {
+      "object_id": 1,
+      "category": "adult",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 2,
+      "category": "child",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 3,
+      "category": "gift",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 4,
+      "category": "blanket",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 5,
+      "category": "cup",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 6,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 7,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 8,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 9,
+      "category": "toy",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 10,
+      "category": "book",
+      "is_thing": true,
+      "status": []
+    }
+  ],
+  "relations": [
+    [
+      1,
+      3,
+      "holding",
+      [
+        [
+          0,
+          13
+        ],
+        [
+          27,
+          41
+        ]
+      ]
+    ],
+    [
+      1,
+      5,
+      "holding",
+      [
+        [
+          13,
+          27
+        ]
+      ]
+    ],
+    [
+      2,
+      3,
+      "carrying",
+      [
+        [
+          0,
+          13
+        ]
+      ]
+    ],
+    [
+      2,
+      4,
+      "next to",
+      [
+        [
+          0,
+          13
+        ]
+      ]
+    ],
+    [
+      1,
+      6,
+      "holding",
+      [
+        [
+          82,
+          95
+        ]
+      ]
+    ],
+    [
+      2,
+      7,
+      "sitting on",
+      [
+        [
+          95,
+          108
+        ]
+      ]
+    ],
+    [
+      2,
+      8,
+      "on",
+      [
+        [
+          95,
+          108
+        ],
+        [
+          246,
+          286
+        ]
+      ]
+    ],
+    [
+      2,
+      9,
+      "holding",
+      [
+        [
+          122,
+          164
+        ]
+      ]
+    ],
+    [
+      2,
+      10,
+      "holding",
+      [
+        [
+          246,
+          286
+        ]
+      ]
+    ]
+  ]
+}

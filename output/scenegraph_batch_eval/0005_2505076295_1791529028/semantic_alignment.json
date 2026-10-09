@@ -1,0 +1,854 @@
+[
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "adult",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "baby",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "bed",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "black dress with white polka dots",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "brown couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "carpet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "lamp",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "leopard-print blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "long dark hair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "woman",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "zebra-print pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "zebra-print rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "baby",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "bed",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "black dress with white polka dots",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "brown couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "carpet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "lamp",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "leopard-print blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "long dark hair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "woman",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "zebra-print pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "baby",
+    "prediction": "zebra-print rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "baby",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "bed",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "black dress with white polka dots",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "brown couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "carpet",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "lamp",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "leopard-print blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "long dark hair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "woman",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "zebra-print pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "zebra-print rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "baby",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "bed",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "black dress with white polka dots",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "brown couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "carpet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "floor",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "lamp",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "leopard-print blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "long dark hair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "woman",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "zebra-print pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "zebra-print rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "baby",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "bed",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "black dress with white polka dots",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "brown couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "carpet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "lamp",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "leopard-print blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "long dark hair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "woman",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "zebra-print pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "zebra-print rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "baby",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "bed",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "black dress with white polka dots",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "brown couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "carpet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "couch",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "lamp",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "leopard-print blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "long dark hair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "woman",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "zebra-print pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "zebra-print rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "baby",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "bed",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "black dress with white polka dots",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "brown couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "carpet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "lamp",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "leopard-print blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "long dark hair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "wall",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "woman",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "zebra-print pillow",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "zebra-print rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "holding",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "in front of",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "wearing",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "hugging",
+    "prediction": "holding",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "hugging",
+    "prediction": "in front of",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "hugging",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "hugging",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "hugging",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "hugging",
+    "prediction": "wearing",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "kissing",
+    "prediction": "holding",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "kissing",
+    "prediction": "in front of",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "kissing",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "kissing",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "kissing",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "kissing",
+    "prediction": "wearing",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "holding",
+    "class": "hypernym/hyponym"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "in front of",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "on",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "sitting on",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "wearing",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "holding",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "in front of",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "on",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "wearing",
+    "class": "mismatch"
+  }
+]

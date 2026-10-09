@@ -1,0 +1,44 @@
+{
+  "object_strict": {
+    "matched": 9,
+    "precision": 0.5294117647058824,
+    "recall": 0.391304347826087
+  },
+  "0.1": {
+    "matched": 1,
+    "precision": 0.034482758620689655,
+    "recall": 0.16666666666666666
+  },
+  "0.3": {
+    "matched": 0,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "0.5": {
+    "matched": 0,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "object_lenient": {
+    "matched": 10,
+    "precision": 0.5882352941176471,
+    "recall": 0.43478260869565216
+  },
+  "lenient": {
+    "0.1": {
+      "matched": 1,
+      "precision": 0.034482758620689655,
+      "recall": 0.16666666666666666
+    },
+    "0.3": {
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "0.5": {
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  }
+}

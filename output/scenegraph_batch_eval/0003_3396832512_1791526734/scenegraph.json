@@ -1,0 +1,264 @@
+{
+  "video_id": "0003_3396832512",
+  "meta": {
+    "height": 480,
+    "width": 640,
+    "fps": 5.0,
+    "duration": 70.8,
+    "num_frames": 354
+  },
+  "objects": [
+    {
+      "object_id": 1,
+      "category": "adult",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 2,
+      "category": "cat",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 3,
+      "category": "child",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 4,
+      "category": "meat",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 5,
+      "category": "paper",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 6,
+      "category": "table",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 7,
+      "category": "chair",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 8,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 9,
+      "category": "sink",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 10,
+      "category": "wall",
+      "is_thing": false,
+      "status": []
+    },
+    {
+      "object_id": 11,
+      "category": "floor",
+      "is_thing": false,
+      "status": []
+    },
+    {
+      "object_id": 12,
+      "category": "bag",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 13,
+      "category": "box",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 14,
+      "category": "candle",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 15,
+      "category": "cake",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 16,
+      "category": "fridge",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 17,
+      "category": "microwave",
+      "is_thing": true,
+      "status": []
+    }
+  ],
+  "relations": [
+    [
+      1,
+      4,
+      "holding",
+      [
+        [
+          0,
+          50
+        ],
+        [
+          151,
+          202
+        ],
+        [
+          252,
+          303
+        ]
+      ]
+    ],
+    [
+      1,
+      2,
+      "looking at",
+      [
+        [
+          0,
+          50
+        ],
+        [
+          151,
+          202
+        ]
+      ]
+    ],
+    [
+      2,
+      1,
+      "looking at",
+      [
+        [
+          0,
+          50
+        ],
+        [
+          151,
+          202
+        ]
+      ]
+    ],
+    [
+      1,
+      6,
+      "sitting on",
+      [
+        [
+          252,
+          303
+        ]
+      ]
+    ],
+    [
+      1,
+      7,
+      "sitting on",
+      [
+        [
+          252,
+          303
+        ]
+      ]
+    ],
+    [
+      1,
+      11,
+      "standing on",
+      [
+        [
+          353,
+          353
+        ]
+      ]
+    ],
+    [
+      2,
+      6,
+      "sitting on",
+      [
+        [
+          202,
+          252
+        ]
+      ]
+    ],
+    [
+      2,
+      14,
+      "sitting on",
+      [
+        [
+          202,
+          252
+        ]
+      ]
+    ],
+    [
+      1,
+      5,
+      "holding",
+      [
+        [
+          151,
+          202
+        ]
+      ]
+    ],
+    [
+      1,
+      12,
+      "holding",
+      [
+        [
+          151,
+          202
+        ]
+      ]
+    ],
+    [
+      1,
+      13,
+      "holding",
+      [
+        [
+          151,
+          202
+        ]
+      ]
+    ],
+    [
+      1,
+      15,
+      "holding",
+      [
+        [
+          151,
+          202
+        ]
+      ]
+    ]
+  ]
+}

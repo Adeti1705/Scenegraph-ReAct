@@ -1,0 +1,1022 @@
+[
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "adult",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "box",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "cell phone",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cellphone",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "cell phone",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "child",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "gift",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "gift",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "light",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "sofa",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "tv",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "blanket",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "cell phone",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "couch",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "gift",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "toy",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "carrying",
+    "prediction": "carrying",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "carrying",
+    "prediction": "holding",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "carrying",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "carrying",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "carrying",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "grabbing",
+    "prediction": "carrying",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "grabbing",
+    "prediction": "holding",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "grabbing",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "grabbing",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "grabbing",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "carrying",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "holding",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "looking at",
+    "prediction": "carrying",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "looking at",
+    "prediction": "holding",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "looking at",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "looking at",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "looking at",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "opening",
+    "prediction": "carrying",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "opening",
+    "prediction": "holding",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "opening",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "opening",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "opening",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "carrying",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "holding",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "sitting on",
+    "prediction": "sitting on",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "carrying",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "holding",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "standing on",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "walking on",
+    "prediction": "carrying",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "walking on",
+    "prediction": "holding",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "walking on",
+    "prediction": "next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "walking on",
+    "prediction": "on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "walking on",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  }
+]

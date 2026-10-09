@@ -1,0 +1,1334 @@
+[
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "adult",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "adult",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "ball",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "ball",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "basket",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "cabinet",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "cabinet",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "rug",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "carpet",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "chair",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "chair",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "child",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "child",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "door",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "door",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "floor",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "floor",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "shelf",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "table",
+    "class": "identical"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "table",
+    "prediction": "wall",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "adult",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "ball",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "book",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "bookshelf",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "cabinet",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "chair",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "child",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "countertop",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "cup",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "dog",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "door",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "floor",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "fridge",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "microwave",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "rug",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "table",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "object",
+    "ground_truth": "wall",
+    "prediction": "wall",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "entering",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "holding",
+    "class": "identical"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "looking at",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "standing next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "holding",
+    "prediction": "standing on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "picking",
+    "prediction": "entering",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "picking",
+    "prediction": "holding",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "picking",
+    "prediction": "looking at",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "picking",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "picking",
+    "prediction": "standing next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "picking",
+    "prediction": "standing on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "throwing",
+    "prediction": "entering",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "throwing",
+    "prediction": "holding",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "throwing",
+    "prediction": "looking at",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "throwing",
+    "prediction": "sitting on",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "throwing",
+    "prediction": "standing next to",
+    "class": "mismatch"
+  },
+  {
+    "element_type": "predicate",
+    "ground_truth": "throwing",
+    "prediction": "standing on",
+    "class": "mismatch"
+  }
+]

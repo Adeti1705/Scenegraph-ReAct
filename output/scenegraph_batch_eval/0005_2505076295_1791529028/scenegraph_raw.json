@@ -1,0 +1,352 @@
+{
+  "video_id": "0005_2505076295",
+  "meta": {
+    "height": 370,
+    "width": 496,
+    "fps": 5.0,
+    "duration": 33.2,
+    "num_frames": 166
+  },
+  "objects": [
+    {
+      "object_id": 1,
+      "category": "adult"
+    },
+    {
+      "object_id": 2,
+      "category": "baby"
+    },
+    {
+      "object_id": 3,
+      "category": "couch"
+    },
+    {
+      "object_id": 4,
+      "category": "bed"
+    },
+    {
+      "object_id": 5,
+      "category": "pillow"
+    },
+    {
+      "object_id": 6,
+      "category": "carpet"
+    },
+    {
+      "object_id": 7,
+      "category": "wall"
+    },
+    {
+      "object_id": 8,
+      "category": "leopard-print blanket"
+    },
+    {
+      "object_id": 9,
+      "category": "woman"
+    },
+    {
+      "object_id": 10,
+      "category": "black dress with white polka dots"
+    },
+    {
+      "object_id": 11,
+      "category": "long dark hair"
+    },
+    {
+      "object_id": 12,
+      "category": "brown couch"
+    },
+    {
+      "object_id": 13,
+      "category": "zebra-print pillow"
+    },
+    {
+      "object_id": 14,
+      "category": "zebra-print rug"
+    },
+    {
+      "object_id": 15,
+      "category": "lamp"
+    },
+    {
+      "object_id": 16,
+      "category": "floor"
+    }
+  ],
+  "relations_seconds": [
+    [
+      1,
+      2,
+      "holding",
+      [
+        [
+          0.0,
+          11.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      1,
+      3,
+      "sitting on",
+      [
+        [
+          0.0,
+          11.0
+        ],
+        [
+          22.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      2,
+      3,
+      "sitting on",
+      [
+        [
+          0.0,
+          11.0
+        ],
+        [
+          22.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      2,
+      4,
+      "next to",
+      [
+        [
+          0.0,
+          11.0
+        ],
+        [
+          22.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      2,
+      5,
+      "next to",
+      [
+        [
+          0.0,
+          11.0
+        ],
+        [
+          22.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      2,
+      6,
+      "on",
+      [
+        [
+          0.0,
+          11.0
+        ],
+        [
+          22.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      2,
+      7,
+      "in front of",
+      [
+        [
+          0.0,
+          11.0
+        ],
+        [
+          22.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      8,
+      2,
+      "holding",
+      [
+        [
+          4.6,
+          6.2
+        ],
+        [
+          7.8,
+          9.4
+        ]
+      ]
+    ],
+    [
+      9,
+      2,
+      "holding",
+      [
+        [
+          11.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ],
+        [
+          23.6,
+          28.4
+        ]
+      ]
+    ],
+    [
+      9,
+      10,
+      "wearing",
+      [
+        [
+          11.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      9,
+      11,
+      "wearing",
+      [
+        [
+          11.0,
+          22.0
+        ],
+        [
+          33.0,
+          33.0
+        ]
+      ]
+    ],
+    [
+      2,
+      12,
+      "sitting on",
+      [
+        [
+          14.2,
+          18.8
+        ],
+        [
+          28.4,
+          33.0
+        ]
+      ]
+    ],
+    [
+      2,
+      13,
+      "next to",
+      [
+        [
+          14.2,
+          18.8
+        ]
+      ]
+    ],
+    [
+      2,
+      14,
+      "on",
+      [
+        [
+          14.2,
+          18.8
+        ]
+      ]
+    ],
+    [
+      2,
+      15,
+      "in front of",
+      [
+        [
+          14.2,
+          18.8
+        ]
+      ]
+    ],
+    [
+      9,
+      12,
+      "sitting on",
+      [
+        [
+          23.6,
+          28.4
+        ]
+      ]
+    ],
+    [
+      9,
+      16,
+      "on",
+      [
+        [
+          23.6,
+          28.4
+        ]
+      ]
+    ],
+    [
+      2,
+      16,
+      "on",
+      [
+        [
+          28.4,
+          33.0
+        ]
+      ]
+    ]
+  ]
+}

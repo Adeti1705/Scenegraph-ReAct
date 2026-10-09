@@ -1,0 +1,1 @@
+Tool execution error: Scene-graph answer must use 'relations_seconds'; relations_seconds excerpt: None

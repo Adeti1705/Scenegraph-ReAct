@@ -1,0 +1,230 @@
+{
+  "video_id": "0003_3396832512",
+  "meta": {
+    "height": 480,
+    "width": 640,
+    "fps": 5.0,
+    "duration": 70.8,
+    "num_frames": 354
+  },
+  "objects": [
+    {
+      "object_id": 1,
+      "category": "adult",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 2,
+      "category": "cat",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 3,
+      "category": "meat",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 4,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 5,
+      "category": "child",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 6,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 7,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 8,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 9,
+      "category": "floor",
+      "is_thing": false,
+      "status": []
+    },
+    {
+      "object_id": 10,
+      "category": "sink",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 11,
+      "category": "table",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 12,
+      "category": "chair",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 13,
+      "category": "cabinet",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 14,
+      "category": "door",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 15,
+      "category": "fridge",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 16,
+      "category": "microwave",
+      "is_thing": true,
+      "status": []
+    }
+  ],
+  "relations": [
+    [
+      1,
+      3,
+      "holding",
+      [
+        [
+          0,
+          51
+        ]
+      ]
+    ],
+    [
+      1,
+      2,
+      "looking at",
+      [
+        [
+          0,
+          51
+        ]
+      ]
+    ],
+    [
+      4,
+      3,
+      "holding",
+      [
+        [
+          51,
+          101
+        ],
+        [
+          101,
+          152
+        ],
+        [
+          202,
+          253
+        ],
+        [
+          253,
+          303
+        ]
+      ]
+    ],
+    [
+      4,
+      2,
+      "sitting on",
+      [
+        [
+          51,
+          101
+        ],
+        [
+          101,
+          152
+        ],
+        [
+          202,
+          253
+        ]
+      ]
+    ],
+    [
+      4,
+      2,
+      "looking at",
+      [
+        [
+          51,
+          101
+        ],
+        [
+          101,
+          152
+        ],
+        [
+          202,
+          253
+        ]
+      ]
+    ],
+    [
+      6,
+      7,
+      "holding",
+      [
+        [
+          152,
+          202
+        ],
+        [
+          303,
+          353
+        ]
+      ]
+    ],
+    [
+      6,
+      2,
+      "sitting on",
+      [
+        [
+          152,
+          202
+        ]
+      ]
+    ],
+    [
+      6,
+      2,
+      "looking at",
+      [
+        [
+          152,
+          202
+        ]
+      ]
+    ]
+  ]
+}

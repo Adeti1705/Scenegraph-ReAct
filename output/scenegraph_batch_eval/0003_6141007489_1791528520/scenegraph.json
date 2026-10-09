@@ -1,0 +1,281 @@
+{
+  "video_id": "0003_6141007489",
+  "meta": {
+    "height": 360,
+    "width": 640,
+    "fps": 5.0,
+    "duration": 56.0,
+    "num_frames": 280
+  },
+  "objects": [
+    {
+      "object_id": 1,
+      "category": "adult",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 2,
+      "category": "child",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 3,
+      "category": "book",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 4,
+      "category": "table",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 5,
+      "category": "chair",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 6,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 7,
+      "category": "ball",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 8,
+      "category": "cup",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 9,
+      "category": "dog",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 10,
+      "category": "others",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 11,
+      "category": "cabinet",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 12,
+      "category": "door",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 13,
+      "category": "fridge",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 14,
+      "category": "microwave",
+      "is_thing": true,
+      "status": []
+    },
+    {
+      "object_id": 15,
+      "category": "wall",
+      "is_thing": false,
+      "status": []
+    },
+    {
+      "object_id": 16,
+      "category": "floor",
+      "is_thing": false,
+      "status": []
+    },
+    {
+      "object_id": 17,
+      "category": "countertop",
+      "is_thing": true,
+      "status": []
+    }
+  ],
+  "relations": [
+    [
+      1,
+      3,
+      "holding",
+      [
+        [
+          0,
+          13
+        ]
+      ]
+    ],
+    [
+      1,
+      7,
+      "holding",
+      [
+        [
+          0,
+          13
+        ]
+      ]
+    ],
+    [
+      2,
+      3,
+      "looking at",
+      [
+        [
+          0,
+          13
+        ]
+      ]
+    ],
+    [
+      1,
+      4,
+      "sitting on",
+      [
+        [
+          13,
+          26
+        ]
+      ]
+    ],
+    [
+      2,
+      4,
+      "sitting on",
+      [
+        [
+          13,
+          26
+        ]
+      ]
+    ],
+    [
+      1,
+      5,
+      "sitting on",
+      [
+        [
+          26,
+          40
+        ]
+      ]
+    ],
+    [
+      2,
+      5,
+      "sitting on",
+      [
+        [
+          26,
+          40
+        ]
+      ]
+    ],
+    [
+      1,
+      8,
+      "holding",
+      [
+        [
+          53,
+          66
+        ]
+      ]
+    ],
+    [
+      2,
+      8,
+      "holding",
+      [
+        [
+          53,
+          66
+        ]
+      ]
+    ],
+    [
+      1,
+      9,
+      "looking at",
+      [
+        [
+          66,
+          80
+        ]
+      ]
+    ],
+    [
+      2,
+      9,
+      "looking at",
+      [
+        [
+          66,
+          80
+        ]
+      ]
+    ],
+    [
+      1,
+      10,
+      "standing on",
+      [
+        [
+          80,
+          93
+        ]
+      ]
+    ],
+    [
+      2,
+      10,
+      "standing on",
+      [
+        [
+          80,
+          93
+        ]
+      ]
+    ],
+    [
+      1,
+      12,
+      "entering",
+      [
+        [
+          101,
+          114
+        ]
+      ]
+    ],
+    [
+      2,
+      12,
+      "entering",
+      [
+        [
+          101,
+          114
+        ]
+      ]
+    ]
+  ]
+}
