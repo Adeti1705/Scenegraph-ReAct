@@ -5,12 +5,14 @@ import re
 import warnings
 from io import BytesIO
 import numpy as np
+from PIL import Image
 
 from videoseek.utils import (
     call_llm_api,
     get_message_content,
     convert_to_free_form_text_representation,
     create_contact_sheet,
+    requires_single_image_per_prompt,
 )
 
 def _source_fps(vr) -> float:
@@ -18,7 +20,6 @@ def _source_fps(vr) -> float:
     if not math.isfinite(fps) or fps <= 0:
         raise ValueError(f"Video has invalid source FPS: {fps!r}")
     return fps
-
 
 def _clip_interval(vr, start_time: float, end_time: float, max_seconds=None):
     frame_count = len(vr)
@@ -53,45 +54,75 @@ def _ontology_guidance(config: dict) -> str:
         "These vocabularies are references, not constraints on raw observations. Use concise, visually grounded open-vocabulary labels; do not force an inexact taxonomy label. Treat subtitles as context, never as visual evidence."
     )
 
+def _format_visual_content(frames: list, timestamps: list, prompt_text: str, config: dict) -> list:
+    """Formats visual prompt content, choosing between a single contact sheet (for single-image
+    models) and discrete individual images (for multi-image models like Kimi K3).
+    """
+    if requires_single_image_per_prompt(config):
+        cs_img = create_contact_sheet(frames, timestamps, max_cols=2)
+        buf = BytesIO()
+        cs_img.save(buf, format="jpeg")
+        b64_img = base64.b64encode(buf.getvalue()).decode("utf-8")
+        return [
+            {"type": "text", "text": prompt_text},
+            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64_img}"}},
+        ]
+
+    content = [{"type": "text", "text": prompt_text}]
+    for idx, (frame, ts) in enumerate(zip(frames, timestamps), start=1):
+        if isinstance(frame, np.ndarray):
+            img = Image.fromarray(frame.astype(np.uint8))
+        elif isinstance(frame, Image.Image):
+            img = frame
+        else:
+            img = Image.fromarray(np.asarray(frame).astype(np.uint8))
+        buf = BytesIO()
+        img.save(buf, format="jpeg")
+        b64_img = base64.b64encode(buf.getvalue()).decode("utf-8")
+        content.append({"type": "text", "text": f"Frame {idx} [timestamp: {ts}]:"})
+        content.append({"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64_img}"}})
+    return content
+
+
 def execute_overview_scenegraph(config: dict, parameters: dict) -> str:
-    """Samples frames across video and combines them into a single contact sheet image grid."""
+    """Samples frames across video to build an entity inventory and scene context."""
     vr = parameters["vr"]
     subtitles = parameters.get("subtitles", [])
     subtitles_str = convert_to_free_form_text_representation(subtitles, content_type="subtitle")
 
-    num_frames = max(1, config.get("frame_sampling_factor", 1) * config.get("overview_base", 4))
     total_frames = len(vr)
     if total_frames == 0:
         raise ValueError("Cannot run scene-graph overview on a video with no frames")
     fps = _source_fps(vr)
-    indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)
+    duration = (total_frames - 1) / fps
 
+    if not requires_single_image_per_prompt(config):
+        if "overview_num_frames" in config:
+            num_frames = int(config["overview_num_frames"])
+        else:
+            num_frames = 6 if duration > 15.0 else 4
+        num_frames = min(8, max(2, num_frames))
+    else:
+        num_frames = max(1, config.get("frame_sampling_factor", 1) * config.get("overview_base", 4))
+
+    indices = np.linspace(0, total_frames - 1, num=num_frames, dtype=int)
     frames = [vr[idx].asnumpy() for idx in indices]
     timestamps = [f"{idx / fps:.1f}s" for idx in indices]
 
-    cs_img = create_contact_sheet(frames, timestamps, max_cols=2)
-    buf = BytesIO()
-    cs_img.save(buf, format="jpeg")
-    b64_img = base64.b64encode(buf.getvalue()).decode("utf-8")
+    prompt_text = (
+        f"Sampled frame timestamps (seconds): {', '.join(timestamps)}\n"
+        f"{_ontology_guidance(config)}\n\n"
+        f"Optional subtitle context (do not use it to assert visible objects or relations):\n{subtitles_str}\n\n"
+        "Task: Build a comprehensive whole-video object inventory from the displayed frames.\n"
+        "1. List EVERY visually distinguishable object, including:\n"
+        "   - Foreground actors and props ('thing' categories, e.g., adult, child, baby, food, cake, candle, cup, toy, phone, dog, cat, etc.).\n"
+        "   - Environment and structural elements ('stuff' and furniture categories, e.g., wall, floor, countertop, table, chair, cabinet, door, fridge, microwave, window, sofa, etc.).\n"
+        "2. Identify distinct multiple instances of the same category (e.g. Adult 1, Adult 2, Child 1, Child 2, Table 1, Cabinet 1, Cake 1) with distinguishing visual attributes (clothing color, position, appearance).\n"
+        "3. Describe prominent static spatial and support relations (e.g. object on table person sitting on chair, cabinet on wall).\n"
+        "Do not assign numeric IDs; the finalizer assigns stable IDs."
+    )
 
-    content = [
-        {
-            "type": "text",
-            "text": (
-                f"Sampled frame timestamps (seconds): {', '.join(timestamps)}\n"
-                f"{_ontology_guidance(config)}\n\n"
-                f"Optional subtitle context (do not use it to assert visible objects or relations):\n{subtitles_str}\n\n"
-                "Task: Build a comprehensive whole-video object inventory from the displayed frames.\n"
-                "1. List EVERY visually distinguishable object, including:\n"
-                "   - Foreground actors and props ('thing' categories, e.g., adult, child, baby, food, cake, candle, cup, bag, toy, phone, dog, cat, etc.).\n"
-                "   - Environment and structural elements ('stuff' and furniture categories, e.g., wall, floor, countertop, table, chair, cabinet, door, fridge, microwave, window, sofa, etc.).\n"
-                "2. Identify distinct multiple instances of the same category (e.g. Adult 1, Adult 2, Child 1, Child 2, Table 1, Cabinet 1, Cake 1) with distinguishing visual attributes (clothing color, position, appearance).\n"
-                "3. Describe prominent static spatial and support relations (e.g. object on table, candle on cake, person sitting on chair, cabinet on wall).\n"
-                "Do not assign numeric IDs; the finalizer assigns stable IDs."
-            ),
-        },
-        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64_img}"}},
-    ]
+    content = _format_visual_content(frames, timestamps, prompt_text, config)
 
     response = call_llm_api(
         messages=[{"role": "user", "content": content}],
@@ -112,7 +143,7 @@ def execute_overview_scenegraph(config: dict, parameters: dict) -> str:
 
 
 def execute_skim_scenegraph(config: dict, parameters: dict) -> str:
-    """Scans mid-grained video interval into a single contact sheet image grid to detect relationship triplets."""
+    """Scans mid-grained video interval to detect relationship triplets."""
     vr = parameters["vr"]
     subtitles = parameters.get("subtitles", [])
     subtitles_str = convert_to_free_form_text_representation(subtitles, content_type="subtitle")
@@ -123,41 +154,50 @@ def execute_skim_scenegraph(config: dict, parameters: dict) -> str:
     start_time, end_time = _clip_interval(vr, start_time, end_time)
     query = parameters.get("query", "What interactions and spatial relationships occur in this segment?")
 
-    num_frames = config.get("frame_sampling_factor", 1) * config.get(
-        "scenegraph_skim_base", config.get("skim_base", 2)
-    )
-    indices = _sample_indices(vr, start_time, end_time, num_frames)
+    interval_seconds = max(0.0, end_time - start_time)
+    if not requires_single_image_per_prompt(config):
+        if interval_seconds <= 6.0:
+            num_frames = 4
+        elif interval_seconds <= 12.0:
+            num_frames = 6
+        else:
+            num_frames = 8
+        factor = config.get("frame_sampling_factor", 1)
+        if factor > 1:
+            num_frames = min(8, num_frames * factor)
+    else:
+        base_frames = config.get("frame_sampling_factor", 1) * config.get(
+            "scenegraph_skim_base", config.get("skim_base", 2)
+        )
+        max_skim_frames = int(config.get("scenegraph_skim_max_frames", 12))
+        num_frames = min(
+            max_skim_frames,
+            max(base_frames, int(math.ceil(interval_seconds))),
+        )
 
+    indices = _sample_indices(vr, start_time, end_time, num_frames)
     frames = [vr[idx].asnumpy() for idx in indices]
     timestamps = [f"{idx / fps:.1f}s" for idx in indices]
 
-    cs_img = create_contact_sheet(frames, timestamps, max_cols=2)
-    buf = BytesIO()
-    cs_img.save(buf, format="jpeg")
-    b64_img = base64.b64encode(buf.getvalue()).decode("utf-8")
+    prompt_text = (
+        f"Segment Interval: {start_time:.1f}s to {end_time:.1f}s\n"
+        f"Sampled Frame Timestamps: {', '.join(timestamps)}\n"
+        f"{_ontology_guidance(config)}\n"
+        f"Query: {query}\n\n"
+        f"Optional subtitle context (do not treat as visual evidence):\n{subtitles_str}\n\n"
+        "Task: Find ALL visually supported relationships in this interval, including:\n"
+        "1. Static spatial, contact, and support relations involving objects, persons, and environment/furniture (e.g., 'on', 'next to', 'sitting on', 'standing on', 'in', 'in front of', 'wearing').\n"
+        "   - For EVERY object that is resting or placed on a surface report the support relation `on` with the full interval where the placement is constant. These persistent support relations are mandatory, not optional.\n"
+        "2. Dynamic action and interaction relations (e.g., 'holding', 'pointing to', 'picking', 'touching', 'eating', 'opening', 'talking to', 'carrying', etc.).\n"
+        "3. Any newly appearing objects (both foreground 'things' and background/structural 'stuff') and distinct instances of the same category (e.g., Adult 1, Adult 2, Child 1).\n\n"
+        "For each candidate, report:\n"
+        "- Subject category and distinguishing attributes (or instance identifier)\n"
+        "- Predicate: choose the single most precise predicate. When the PVSG predicate list contains an accurate match, use it EXACTLY as written. Only use a non-PVSG phrase when no listed predicate is visually accurate.\n"
+        "- Object category and distinguishing attributes (or instance identifier)\n"
+        "- Temporal bounds in seconds: For ongoing/static relations, span across the timestamps where they co-exist in that state. For transient actions, tightly bound start/end to the specific timestamps where the action occurs. Keep discontinuous intervals separate."
+    )
 
-    content = [
-        {
-            "type": "text",
-            "text": (
-                f"Segment Interval: {start_time:.1f}s to {end_time:.1f}s\n"
-                f"Frame Timestamps in Grid: {', '.join(timestamps)}\n"
-                f"{_ontology_guidance(config)}\n"
-                f"Query: {query}\n\n"
-                f"Optional subtitle context (do not treat as visual evidence):\n{subtitles_str}\n\n"
-                "Task: Find ALL visually supported relationships in this interval, including:\n"
-                "1. Static spatial, contact, and support relations involving objects, persons, and environment/furniture (e.g., 'on', 'next to', 'sitting on', 'standing on', 'in', 'in front of', 'wearing').\n"
-                "2. Dynamic action and interaction relations (e.g., 'holding', 'pointing to', 'picking', 'touching', 'eating', 'opening', 'talking to', 'carrying').\n"
-                "3. Any newly appearing objects (both foreground 'things' and background/structural 'stuff') and distinct instances of the same category (e.g., Adult 1, Adult 2, Child 1).\n\n"
-                "For each candidate, report:\n"
-                "- Subject category and distinguishing attributes (or instance identifier)\n"
-                "- Concise predicate phrase (referencing PVSG predicate list)\n"
-                "- Object category and distinguishing attributes (or instance identifier)\n"
-                "- Temporal bounds in seconds: For ongoing/static relations, span across the timestamps where they co-exist in that state. For transient actions, tightly bound start/end to the specific timestamps where the action occurs. Keep discontinuous intervals separate."
-            ),
-        },
-        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64_img}"}},
-    ]
+    content = _format_visual_content(frames, timestamps, prompt_text, config)
 
     response = call_llm_api(
         messages=[{"role": "user", "content": content}],
@@ -178,7 +218,7 @@ def execute_skim_scenegraph(config: dict, parameters: dict) -> str:
 
 
 def execute_focus_scenegraph(config: dict, parameters: dict) -> str:
-    """Inspects short clip into a single contact sheet image grid to verify fine-grained predicates."""
+    """Inspects short clip to verify fine-grained predicates."""
     vr = parameters["vr"]
     subtitles = parameters.get("subtitles", [])
     subtitles_str = convert_to_free_form_text_representation(subtitles, content_type="subtitle")
@@ -191,36 +231,42 @@ def execute_focus_scenegraph(config: dict, parameters: dict) -> str:
     )
     query = parameters.get("query", "Verify precise spatial predicate and contact interaction.")
 
-    num_frames = config.get("frame_sampling_factor", 1) * config.get(
-        "scenegraph_focus_base", config.get("focus_base", 2)
-    )
-    indices = _sample_indices(vr, start_time, end_time, num_frames)
+    interval_seconds = max(0.0, end_time - start_time)
+    total_slice_frames = max(1, int(interval_seconds * fps) + 1)
+    if not requires_single_image_per_prompt(config):
+        if interval_seconds <= 1.5:
+            num_frames = 4
+        elif interval_seconds <= 3.0:
+            num_frames = 6
+        else:
+            num_frames = 8
+        factor = config.get("frame_sampling_factor", 1)
+        if factor > 1:
+            num_frames = min(8, num_frames * factor)
+        num_frames = min(num_frames, total_slice_frames)
+    else:
+        num_frames = config.get("frame_sampling_factor", 1) * config.get(
+            "scenegraph_focus_base", config.get("focus_base", 2)
+        )
+        num_frames = min(num_frames, total_slice_frames)
 
+    indices = _sample_indices(vr, start_time, end_time, num_frames)
     frames = [vr[idx].asnumpy() for idx in indices]
     timestamps = [f"{idx / fps:.1f}s" for idx in indices]
 
-    cs_img = create_contact_sheet(frames, timestamps, max_cols=2)
-    buf = BytesIO()
-    cs_img.save(buf, format="jpeg")
-    b64_img = base64.b64encode(buf.getvalue()).decode("utf-8")
+    prompt_text = (
+        f"Short Clip Interval: {start_time:.1f}s to {end_time:.1f}s\n"
+        f"Sampled Frame Timestamps: {', '.join(timestamps)}\n"
+        f"{_ontology_guidance(config)}\n"
+        f"Query: {query}\n\n"
+        f"Optional subtitle context (do not treat as visual evidence):\n{subtitles_str}\n\n"
+        "Task: Verify the queried object instances and relationship against the displayed frames.\n"
+        "1. Accurately verify static spatial/contact relations (e.g., 'on', 'next to', 'sitting on', 'standing on', 'in', 'in front of', 'wearing') or dynamic action relations ('holding', 'touching', 'pointing to', 'eating', 'picking', etc.).\n"
+        "2. Specifically describe the subject and object (including furniture/structural 'stuff' like table, chair, countertop, wall, or specific persons/props).\n"
+        "3. Cite the exact sample timestamps supporting the relation. Provide tight start/end bounds in seconds based on visible evidence (do not guess beyond the observed timestamps). If unverified, report unverified."
+    )
 
-    content = [
-        {
-            "type": "text",
-            "text": (
-                f"Short Clip Interval: {start_time:.1f}s to {end_time:.1f}s\n"
-                f"Frame Timestamps in Grid: {', '.join(timestamps)}\n"
-                f"{_ontology_guidance(config)}\n"
-                f"Query: {query}\n\n"
-                f"Optional subtitle context (do not treat as visual evidence):\n{subtitles_str}\n\n"
-                "Task: Verify the queried object instances and relationship against the displayed frames.\n"
-                "1. Accurately verify static spatial/contact relations (e.g., 'on', 'next to', 'sitting on', 'standing on', 'in', 'in front of', 'wearing') or dynamic action relations ('holding', 'touching', 'pointing to', 'eating', 'picking', etc.).\n"
-                "2. Specifically describe the subject and object (including furniture/structural 'stuff' like table, chair, countertop, wall, or specific persons/props).\n"
-                "3. Cite the exact sample timestamps in the grid supporting the relation. Provide tight start/end bounds in seconds based on visible evidence (do not guess beyond the observed timestamps). If unverified, report unverified."
-            ),
-        },
-        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64_img}"}},
-    ]
+    content = _format_visual_content(frames, timestamps, prompt_text, config)
 
     response = call_llm_api(
         messages=[{"role": "user", "content": content}],
@@ -402,6 +448,21 @@ def repair_and_parse_scenegraph_json(res_str: str) -> dict:
     raise ValueError(f"Could not parse valid scene graph JSON from model response: {res_str[:500]}")
 
 
+def _merge_close_spans(spans, max_gap_seconds=1.5):
+    """Merge spans separated by small gaps (e.g. skim-bin boundaries) into
+    continuous spans. Spans must be [start, end] pairs in seconds."""
+    if not spans:
+        return []
+    ordered = sorted((float(s), float(e)) for s, e in spans if e > s)
+    merged = []
+    for start, end in ordered:
+        if merged and start - merged[-1][1] <= max_gap_seconds:
+            merged[-1][1] = max(merged[-1][1], end)
+        else:
+            merged.append([start, end])
+    return merged
+
+
 def _to_open_vocabulary_graph(graph, video_id, meta):
     if not isinstance(graph, dict):
         raise ValueError("Scene-graph answer must be a JSON object")
@@ -463,7 +524,8 @@ def _to_open_vocabulary_graph(graph, video_id, meta):
 
         if subject_id not in object_ids or object_id not in object_ids:
             continue
-        predicate = str(predicate).strip()
+        # Canonicalize predicate formatting: 'in_front_of' -> 'in front of'.
+        predicate = re.sub(r"[_\-\s]+", " ", str(predicate)).strip().lower()
         if not predicate:
             continue
         frame_spans = []
@@ -482,9 +544,12 @@ def _to_open_vocabulary_graph(graph, video_id, meta):
             merged_relations[edge_key] = []
         merged_relations[edge_key].extend(frame_spans)
 
+    # Drop relations with no valid spans: they can never match any ground
+    # truth and only inflate the prediction count (precision damage).
     relations = [
-        [sub_id, obj_id, pred, spans]
+        [sub_id, obj_id, pred, merged_spans]
         for (sub_id, obj_id, pred), spans in merged_relations.items()
+        if (merged_spans := _merge_close_spans(spans, max_gap_seconds=1.5))
     ]
 
     return {
@@ -532,7 +597,7 @@ def to_pvsg_graph(graph, object_categories, predicates):
     duration = float(graph["meta"]["duration"])
     canonical_relations = []
     for subject_id, object_id, predicate, spans_seconds in graph.get("relations_seconds", []):
-        predicate = predicate.strip().lower()
+        predicate = re.sub(r"[_\-\s]+", " ", str(predicate)).strip().lower()
         if predicate not in allowed_predicates:
             warnings.warn(f"Skipping non-PVSG predicate {predicate!r} in export", stacklevel=2)
             continue
@@ -543,7 +608,11 @@ def to_pvsg_graph(graph, object_categories, predicates):
             start_seconds = min(max(start_seconds, 0.0), duration)
             end_seconds = min(max(end_seconds, start_seconds), duration)
             start_frame = min(max_frame, int(start_seconds * fps + 0.5))
-            end_frame = min(max_frame, int(end_seconds * fps + 0.5))
+            # -1 converts the half-open second interval to an inclusive PVSG
+            # frame index (frame f covers [f/fps, (f+1)/fps) seconds); the
+            # first frame NOT covered is int(end*fps + 0.5), so the last
+            # covered frame is that minus one.
+            end_frame = min(max_frame, int(end_seconds * fps + 0.5) - 1)
             frame_spans.append([start_frame, max(start_frame, end_frame)])
         canonical_relations.append([subject_id, object_id, predicate, frame_spans])
 
@@ -585,17 +654,22 @@ def execute_answer_scenegraph(config: dict, parameters: dict) -> str:
                 f"Observed Video Evidence and Triplets:\n{observations_summary}\n\n"
                 "Construct one comprehensive scene graph. Preserve stable object identities and represent discontinuous intervals as separate spans.\n"
                 "1. Comprehensive Objects Inventory:\n"
-                "   - Include ALL distinct object instances identified in the visual observations.\n"
-                "   - Include foreground objects/actors ('thing' categories: all distinct adults, children, props, food, etc.). Assign distinct unique integer `object_id`s to distinct individuals/instances.\n"
+                "   - Include ALL distinct object instances identified in the visual observations, INCLUDING objects mentioned in observations but not involved in any relation.\n"
+                "   - CO-REFERENCE CONSOLIDATION: if different observations refer to the same physical entity with different labels (e.g. 'adult', 'person', and 'woman' describing one individual; or the same seen across intervals), merge them into ONE object_id and pick the single most accurate, consistent category for it. Do not create separate IDs for the same physical entity.\n"
+                "   - Assign distinct unique integer `object_id`s only to genuinely distinct individuals/instances of the same category.\n"
                 "   - Include background, structural, and furniture elements ('stuff' categories: wall, floor, countertop, table, chair, cabinet, door, fridge, microwave, etc.).\n\n"
                 "2. Meaningful Relationships (DO NOT output trivial ambient proximity like 'person next to wall', 'person on floor', 'person next to microwave'):\n"
                 "   - Active physical contact & manipulation: `holding`, `picking`, `touching`, `eating`, `carrying`.\n"
                 "   - Visual attention & gaze: `looking at`, `pointing to`.\n"
-                "   - Direct support & placement: `on`, `in`, `sitting on`, `standing on` (e.g. candle on cake, cake on table, person sitting on chair).\n\n"
+                "   - Direct support & placement: `on`, `in`, `sitting on`, `standing on` (e.g. candle on cake, cake on table, person sitting on chair).\n"
+                "   - SUPPORT ATTRIBUTION: a support relation `on` must connect the two objects where one physically rests on the other (the object and its surface).\n\n"
                 "3. Edge Consolidation & Accurate Temporal Bounds:\n"
+                "   - TEMPORAL FIDELITY: each relation keeps the time interval where it was OBSERVED. The observations come from different time windows of the video; a relation reported in an early window must keep that early interval. Never shift or clamp a relation's interval to the window of the most recent observation, and never give a relation the full video duration unless it was observed throughout.\n"
                 "   - Group ALL intervals for the same (subject, object, predicate) into a SINGLE entry with an array of spans `[[start1, end1], ...]`. Do not output duplicate triplet entries.\n"
                 "   - For continuous ongoing relationships observed across multiple chunks (e.g. adult holding child across consecutive intervals), merge them into a unified continuous span `[start_sec, end_sec]`.\n"
-                "   - For transient actions (e.g. pointing, picking, blowing), tightly bound start/end to the specific observed timestamps where the action occurs.\n\n"
+                "   - When consecutive observation intervals report the same relation with only a small gap between them (e.g. one interval ends at 20.2s and the next starts at 20.3s), treat it as ONE continuous span, not separate spans.\n"
+                "   - For transient actions, tightly bound start/end to the specific observed timestamps where the action occurs.\n"
+                "   - PREDICATE FORMAT: write predicates as plain lowercase words separated by single spaces, never with underscores or hyphens.\n\n"
                 "Return one JSON object with `objects`, an array of `{object_id: unique integer, category: open-vocabulary string}`, and `relations_seconds`, an array of `[subject_object_id, object_object_id, predicate_string, [[start_seconds, end_seconds], ...]]` entries.\n"
                 "Ensure IDs are unique integers, every relation references valid object IDs, and intervals are ordered numeric seconds within video duration.\n"
                 "Return ONLY the valid JSON object without markdown formatting or introductory text."

@@ -10,6 +10,7 @@ from videoseek.utils import (
     get_message_content,
     convert_to_free_form_text_representation,
     create_contact_sheet,
+    requires_single_image_per_prompt,
 )
 from config import general_config
 
@@ -46,25 +47,43 @@ def execute_overview(config: dict, parameters: dict) -> str:
     timestamps = [f"{idx / fps:.1f}s" for idx in frame_indices]
     raw_frames = [vr[idx].asnumpy() for idx in frame_indices]
 
-    cs_img = create_contact_sheet(raw_frames, timestamps, max_cols=2)
-    buf = BytesIO()
-    cs_img.save(buf, format="jpeg")
-    base64_image = base64.b64encode(buf.getvalue()).decode("utf-8")
+    if requires_single_image_per_prompt(config):
+        cs_img = create_contact_sheet(raw_frames, timestamps, max_cols=2)
+        buf = BytesIO()
+        cs_img.save(buf, format="jpeg")
+        base64_image = base64.b64encode(buf.getvalue()).decode("utf-8")
 
-    content = [
-        {
-            "type": "text",
-            "text": (
-                f"Video Duration: 0.0s - {duration:.1f}s\n"
-                f"Video Subtitles:\n{subtitles_str}\n\n"
-                f"Frame Timestamps in Grid: {', '.join(timestamps)}\n\n"
-                "Please generate detailed descriptions for each frame timestamp shown in the grid.\n"
-                "Return ONLY valid JSON. Use this exact schema:\n"
-                "{\"frames\": [{\"timestamp\": \"1.0s\", \"description\": \"FRAME_DESCRIPTION_1\"}, ...]}\n"
-            ),
-        },
-        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}},
-    ]
+        content = [
+            {
+                "type": "text",
+                "text": (
+                    f"Video Duration: 0.0s - {duration:.1f}s\n"
+                    f"Video Subtitles:\n{subtitles_str}\n\n"
+                    f"Sampled Frame Timestamps: {', '.join(timestamps)}\n\n"
+                    "Please generate detailed descriptions for each frame timestamp shown in the grid.\n"
+                    "Return ONLY valid JSON. Use this exact schema:\n"
+                    "{\"frames\": [{\"timestamp\": \"1.0s\", \"description\": \"FRAME_DESCRIPTION_1\"}, ...]}\n"
+                ),
+            },
+            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}},
+        ]
+    else:
+        prompt_text = (
+            f"Video Duration: 0.0s - {duration:.1f}s\n"
+            f"Video Subtitles:\n{subtitles_str}\n\n"
+            f"Sampled Frame Timestamps: {', '.join(timestamps)}\n\n"
+            "Please generate detailed descriptions for each frame timestamp.\n"
+            "Return ONLY valid JSON. Use this exact schema:\n"
+            "{\"frames\": [{\"timestamp\": \"1.0s\", \"description\": \"FRAME_DESCRIPTION_1\"}, ...]}\n"
+        )
+        content = [{"type": "text", "text": prompt_text}]
+        for idx, (frame, ts) in enumerate(zip(raw_frames, timestamps), start=1):
+            img = Image.fromarray(frame.astype(np.uint8))
+            buf = BytesIO()
+            img.save(buf, format="jpeg")
+            b64_img = base64.b64encode(buf.getvalue()).decode("utf-8")
+            content.append({"type": "text", "text": f"Frame {idx} [timestamp: {ts}]:"})
+            content.append({"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64_img}"}})
 
     response = call_llm_api(
         messages=[{"role": "user", "content": content}],

@@ -59,30 +59,60 @@ def execute_skim(config: dict, parameters: dict) -> str:
     start_idx = max(0, int(start_time * fps))
     end_idx = min(len(vr) - 1, int(end_time * fps))
 
-    num_frames = config.get("frame_sampling_factor", 1) * config.get("skim_base", 2)
+    interval_seconds = max(0.0, end_time - start_time)
+    if not requires_single_image_per_prompt(config):
+        if interval_seconds <= 6.0:
+            num_frames = 4
+        elif interval_seconds <= 12.0:
+            num_frames = 6
+        else:
+            num_frames = 8
+        factor = config.get("frame_sampling_factor", 1)
+        if factor > 1:
+            num_frames = min(8, num_frames * factor)
+    else:
+        num_frames = config.get("frame_sampling_factor", 1) * config.get("skim_base", 2)
+
     indices = np.linspace(start_idx, end_idx, num=num_frames, dtype=int)
 
     raw_frames = [vr[idx].asnumpy() for idx in indices]
     timestamps = [f"{idx / fps:.1f}s" for idx in indices]
 
-    cs_img = create_contact_sheet(raw_frames, timestamps, max_cols=2)
-    buf = BytesIO()
-    cs_img.save(buf, format="jpeg")
-    base64_image = base64.b64encode(buf.getvalue()).decode("utf-8")
+    if requires_single_image_per_prompt(config):
+        cs_img = create_contact_sheet(raw_frames, timestamps, max_cols=2)
+        buf = BytesIO()
+        cs_img.save(buf, format="jpeg")
+        base64_image = base64.b64encode(buf.getvalue()).decode("utf-8")
 
-    content = [
-        {
-            "type": "text",
-            "text": (
-                f"Video segment ({start_time:.1f}s - {end_time:.1f}s):\n"
-                f"Frame Timestamps in Grid: {', '.join(timestamps)}\n"
-                f"Video Subtitles:\n{subtitles_str}\n\n"
-                f"Question / Query:\n{query}\n\n"
-                "Please describe the content of the viewed video frames in detail with their timestamps (~25 words per timestamp)."
-            ),
-        },
-        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}},
-    ]
+        content = [
+            {
+                "type": "text",
+                "text": (
+                    f"Video segment ({start_time:.1f}s - {end_time:.1f}s):\n"
+                    f"Sampled Frame Timestamps: {', '.join(timestamps)}\n"
+                    f"Video Subtitles:\n{subtitles_str}\n\n"
+                    f"Question / Query:\n{query}\n\n"
+                    "Please describe the content of the viewed video frames in detail with their timestamps (~25 words per timestamp)."
+                ),
+            },
+            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}},
+        ]
+    else:
+        prompt_text = (
+            f"Video segment ({start_time:.1f}s - {end_time:.1f}s):\n"
+            f"Sampled Frame Timestamps: {', '.join(timestamps)}\n"
+            f"Video Subtitles:\n{subtitles_str}\n\n"
+            f"Question / Query:\n{query}\n\n"
+            "Please describe the content of the viewed video frames in detail with their timestamps (~25 words per timestamp)."
+        )
+        content = [{"type": "text", "text": prompt_text}]
+        for idx, (frame, ts) in enumerate(zip(raw_frames, timestamps), start=1):
+            img = Image.fromarray(frame.astype(np.uint8))
+            buf = BytesIO()
+            img.save(buf, format="jpeg")
+            b64_img = base64.b64encode(buf.getvalue()).decode("utf-8")
+            content.append({"type": "text", "text": f"Frame {idx} [timestamp: {ts}]:"})
+            content.append({"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64_img}"}})
 
     response = call_llm_api(
         messages=[{"role": "user", "content": content}],

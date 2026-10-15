@@ -231,7 +231,9 @@ class SceneGraphAgent(BaseAgent):
             return Action(
                 function_name="skim",
                 parameters={
-                    "query": "Find all visually supported ontology-valid relationships and newly appearing objects in this interval. Report conservative relation start/end seconds.",
+                    "query": (
+                        "Find all visually supported relationships and newly appearing objects in this interval. Focus on human actions, object interactions, and primary support postures ('sitting on', 'standing on', 'holding', 'on'). Use the most precise PVSG predicate when accurate. Report conservative relation start/end seconds."
+                    ),
                     "start_time": start_time,
                     "end_time": end_time,
                 },
@@ -295,6 +297,10 @@ class SceneGraphAgent(BaseAgent):
             )
             if scheduled_action is not None:
                 step_instruction += f" Follow the required coverage action: {scheduled_action.function_name} {scheduled_action.parameters}."
+            else:
+                step_instruction += (
+                    " Refinement step: review prior observations, pick the relationship whose temporal bounds are least certain (or a transient action that may have been missed), and call `focus` on its interval to verify the predicate and sharpen its start/end seconds. If all bounds are already verified, call `answer`."
+                )
             self.messages.append(
                 {
                     "role": "user",
